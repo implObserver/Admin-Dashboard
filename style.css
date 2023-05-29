@@ -22,12 +22,14 @@
 .navbar {
     grid-column: 2/4;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 4fr 2fr;
     grid-template-rows: 1fr 1fr;
+    gap: 1vw;
+    padding-left: 5vw;
 }
 
 .search-elements {
-    display:grid;
+    display: grid;
     grid-template-columns: min-content 1fr;
     align-content: center;
 }
@@ -36,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4vw;
+    width: max-content;
     height: 4vh;
 }
 
@@ -52,6 +54,55 @@
     border-radius: 1vw;
     width: 40vw;
     height: 4vh;
+}
+
+.user-elements {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    align-items: center;
+    justify-items: right;
+    gap: 2vw;
+}
+
+.bell-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: 4vh;
+}
+
+.user-avatar-wrapper {
+    display: flex;
+    width: 6vh;
+    height: 6vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-avatar {
+    background-color: rgb(134, 193, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+
+    /* не забываем о кроссбраузерности */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+}
+
+.user-avatar>img {
+    width: 75%;
+    height: 75%;
+}
+
+.user-name {
+    height: min-content;
+    font-size: 2vh;
 }
 
 .article {
