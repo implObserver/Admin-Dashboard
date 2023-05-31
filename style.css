@@ -17,6 +17,7 @@ html {
     display: grid;
 }
 
+/* Sidebar elements {  */
 .sidebar {
     background-color: #0ea5e9;
     display: grid;
@@ -73,7 +74,11 @@ html {
 .name:hover {
     text-decoration: underline;
 }
+/* } Sidebar elements */
 
+
+
+/* Navbar elements {  */
 .navbar {
     display: grid;
     gap: 1vh;
@@ -103,9 +108,20 @@ html {
 
 .search-area>input {
     background-color: #e2e8f0;
-    border-radius: 1vw;
-    width: 100%;
+    border-radius: 1vh;
+    width: 90%;
     height: 4vh;
+    font-size: 0.7rem;
+    padding-left: 1vh;
+    outline: none;
+}
+
+.search-area>input:focus {
+    border: 0.25vh rgb(172, 172, 172) solid;
+}
+
+.search-area>input::placeholder {
+    font-size: 0.7rem;
 }
 
 .user-elements {
@@ -205,6 +221,14 @@ html {
     color: white;
 }
 
+.menu button:hover {
+    background-color: #21b4f8;
+}
+
+/* } Navbar elements */
+
+
+/* Article elements {  */
 .article {
     padding: 2vh;
     background-color: #e2e8f0;
@@ -348,17 +372,21 @@ html {
     width: 20vh;
 }
 
+/* } Article elements */
+
+
+
 @media screen and (max-aspect-ratio:1/1.0001) {
     .container {
         grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
     }
 
     .navbar {
-        grid-template-areas: 
-        'user'
-        'hi'
-        'search'
-        'menu';
+        grid-template-areas:
+            'user'
+            'hi'
+            'search'
+            'menu';
     }
 
     .user-elements {
@@ -371,7 +399,7 @@ html {
     .hi-there-elements {
         grid-area: hi;
         display: flex;
-        
+
         border-bottom: 1px solid rgb(230, 227, 227);
     }
 
