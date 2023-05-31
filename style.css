@@ -234,7 +234,7 @@ html {
     display: grid;
     grid-template-columns: 1vh 1fr;
     border-radius: 1vh;
-    min-height: 200px;
+    min-height: 15vw;
     overflow: hidden;
 }
 
@@ -377,6 +377,10 @@ html {
 
     .sections {
         grid-template-columns: repeat(auto-fit, 21vh);
+    }
+
+    .card {
+        min-height: 30vw;
     }
 }
 
