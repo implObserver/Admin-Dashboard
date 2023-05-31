@@ -47,9 +47,6 @@ html {
 
 .sections {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, min-content);
-
     padding: 3vh;
     gap: 2vh
 }
@@ -77,14 +74,10 @@ html {
     text-decoration: underline;
 }
 
-.communities {
-    padding-bottom: 5vh;
-}
-
 .navbar {
     display: grid;
-    gap: 1vw;
-    padding: 1vw;
+    gap: 1vh;
+    padding: 1vh;
 }
 
 .search-elements {
@@ -171,18 +164,18 @@ html {
     gap: 1vh;
 }
 
-.hi-there-elements>p {
+.hi-there-text {
     display: flex;
     flex-direction: column;
     height: min-content;
     font-weight: 800;
 }
 
-.hi-there-elements>p>span:nth-child(1) {
+.hi-there-text>span:nth-child(1) {
     font-size: 1.4vh;
 }
 
-.hi-there-elements>p>span:nth-child(2) {
+.hi-there-text>span:nth-child(2) {
     font-size: 2.4vh;
 }
 
@@ -355,47 +348,35 @@ html {
     width: 20vh;
 }
 
-@media screen and (max-aspect-ratio:1/1.001) {
+@media screen and (max-aspect-ratio:1/1.0001) {
     .container {
         grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
-        grid-template-areas:
-            'nav'
-            'side'
-            'art';
     }
 
     .navbar {
-        grid-area: nav;
-        grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
-        grid-template-areas:
-            'user-panel'
-            'welcome-panel'
-            'search-panel'
-            'menu';
-    }
-
-    .search-elements {
-        grid-area: search-panel;
+        grid-template-areas: 
+        'user'
+        'hi'
+        'search'
+        'menu';
     }
 
     .user-elements {
-        grid-area: user-panel;
+        grid-area: user;
+        justify-content: right;
+        padding-bottom: 5vh;
+        border-bottom: 1px solid rgb(230, 227, 227);
     }
 
     .hi-there-elements {
-        grid-area: welcome-panel;
+        grid-area: hi;
+        display: flex;
+        
+        border-bottom: 1px solid rgb(230, 227, 227);
     }
 
-    .menu {
-        grid-area: menu;
-    }
-
-    .sidebar {
-        grid-area: side;
-    }
-
-    .sidebar>.article {
-        grid-area: art;
+    .sections {
+        grid-template-columns: repeat(auto-fit, 21vh);
     }
 }
 
@@ -407,6 +388,7 @@ html {
     }
 
     .navbar {
+        grid-column: 2/4;
         grid-template-columns: 4fr 2fr;
         grid-template-rows: 1fr 1.5fr;
     }
@@ -416,8 +398,13 @@ html {
         grid-template-rows: min-content 1fr;
     }
 
-    .navbar {
-        grid-column: 2/4;
+    .sections {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, min-content);
+    }
+
+    .communities {
+        padding-bottom: 5vh;
     }
 
     .article {
