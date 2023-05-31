@@ -216,9 +216,9 @@ html {
     padding: 2vh;
     background-color: #e2e8f0;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1.2fr;
     grid-template-rows: 2fr 2fr;
-    gap: 1vh;
+    gap: 2vh;
 }
 
 .projects {
@@ -245,10 +245,11 @@ html {
     grid-template-columns: 1vh 1fr;
     border-radius: 1vh;
     min-height: 200px;
+    overflow: hidden;
 }
 
 .card-decor {
-    border-radius: 1vh 0vh 0vh 1vh;
+
     background-color: orange;
 }
 
@@ -267,6 +268,7 @@ html {
 .card-text {
     height: min-content;
     font-size: 0.8rem;
+    color: grey;
 }
 
 .card-panel {
@@ -283,7 +285,39 @@ html {
 }
 
 .announcements {
-    background-color: green;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 1vh;
+}
+
+.announcements-list {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(50px, 15vw, 15vw), 1fr));
+    gap: 1vh;
+    border-radius: 1vh;
+    padding: 2vh;
+    overflow: hidden;
+}
+
+.announcement {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    align-content: center;
+}
+
+.announcement:not(:last-child) {
+    border-bottom: 1px solid rgb(230, 227, 227);
+}
+
+.announcement-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.announcement-text {
+    font-size: 0.6rem;
+    color: grey;
 }
 
 .trending {
