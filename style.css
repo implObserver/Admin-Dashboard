@@ -450,6 +450,6 @@ html {
     }
 
     .cards {
-        grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 20vw, 20vw), 1fr));
+        grid-template-columns: repeat(auto-fit, min-content, 1fr));
     }
 }
