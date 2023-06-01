@@ -74,6 +74,7 @@ html {
 .name:hover {
     text-decoration: underline;
 }
+
 /* } Sidebar elements */
 
 
@@ -399,12 +400,15 @@ html {
     .hi-there-elements {
         grid-area: hi;
         display: flex;
-
         border-bottom: 1px solid rgb(230, 227, 227);
     }
 
     .sections {
-        grid-template-columns: repeat(auto-fit, 21vh);
+        grid-template-columns: repeat(auto-fit, min(23vw, 21vh));
+    }
+
+    .name {
+        font-size: 0.9rem;
     }
 
     .card {
