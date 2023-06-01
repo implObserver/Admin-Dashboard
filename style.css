@@ -408,7 +408,7 @@ html {
     }
 
     .name {
-        font-size: 0.85rem;
+        font-size: clamp(1.2vh, 3vw, 3vh);
     }
 
     .card {
